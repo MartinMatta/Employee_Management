@@ -36,4 +36,7 @@ public interface EmployeeController {
     @RequestMapping(value = "/add-employee", method = RequestMethod.POST)
     String addEmployee(ModelMap model, @Valid Employee employee, BindingResult result);
 
+    @RequestMapping(value = "/detail-employee", method = RequestMethod.GET)
+    String detailEmployee(ModelMap model, @RequestParam long id);
+
 }

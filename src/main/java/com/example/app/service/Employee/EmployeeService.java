@@ -15,7 +15,7 @@ public interface EmployeeService {
     void updateEmployee(Employee Employee);
 
     void addEmployee(String name, String surname,
-                     String project, Date date,
+                     String tel, Date date,
                      boolean isDone);
 
     void deleteEmployee(long id);

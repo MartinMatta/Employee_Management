@@ -64,7 +64,7 @@ public class EmployeeControllerImpl implements EmployeeController {
     public String showUpdateEmployeePage(long id, ModelMap model) {
         Employee employee = employeeService.getEmployeeById(id).get();
         model.put("employee", employee);
-        return "employee";
+        return "employee-update";
     }
 
     @Override
@@ -73,8 +73,6 @@ public class EmployeeControllerImpl implements EmployeeController {
         if (result.hasErrors()) {
             return "employee";
         }
-
-        employee.setName(getLoggedInUserName(model));
         employeeService.updateEmployee(employee);
         return "redirect:/list-employees";
     }
@@ -86,9 +84,16 @@ public class EmployeeControllerImpl implements EmployeeController {
             return "employee";
         }
 
-        employee.setName(getLoggedInUserName(model));
+        employee.setDate(new Date());
         employeeService.saveEmployee(employee);
         return "redirect:/list-employees";
+    }
+
+    @Override
+    public String detailEmployee(ModelMap model, long id) {
+        Employee employee = employeeService.getEmployeeById(id).get();
+        model.put("employee", employee);
+        return "employee-detail";
     }
 
 }

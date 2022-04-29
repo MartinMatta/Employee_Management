@@ -1,0 +1,5 @@
+INSERT INTO EMPLOYEE VALUES(1, '2022-09-12 15:48:37.603', 'martinmatta35@gmail.com', 'Martin Matta', 0978446768);
+INSERT INTO EMPLOYEE VALUES(2, '2021-12-28 14:21:27.308', 'adam.novy8@gmail.com', 'Adam Novy', 0943861764);
+INSERT INTO EMPLOYEE VALUES(3, '2022-04-13 16:38:19.658', 'ivan756@gmail.com', 'Ivan Nemec', 0967119834);
+INSERT INTO EMPLOYEE VALUES(4, '2019-05-30 16:55:13.287', 'kmatta4@gmail.com', 'Kristian Matta', 0973946932);
+INSERT INTO EMPLOYEE VALUES(5, '2020-01-22 11:15:22.496', 'jannovy3@gmail.com', 'Jan Novy', 0956875943);

@@ -14,20 +14,22 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th width="40%">Name</th>
-                                <th width="40%">Date</th>
-                                <th width="20%"></th>
+                                <th width="27%">Name</th>
+                                <th width="27%">Tel. number</th>
+                                <th width="27%">Registration date</th>
+                                <th width="19%"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <c:forEach items="${employees}" var="employee">
                                 <tr>
-                                    <td>${employee.surname}</td>
+                                    <td>${employee.name}</td>
+                                    <td>${employee.tel}</td>
                                     <td>
                                         <fmt:formatDate value="${employee.date}" pattern="dd/MM/yyyy" />
                                     </td>
                                     <td><a type="button" class="btn btn-success" href="/update-employee?id=${employee.id}">Update</a>
-                                        <a type="button" class="btn btn-warning" href="/delete-employee?id=${employee.id}">Delete</a></td>
+                                        <a type="button" class="btn btn-primary" href="/detail-employee?id=${employee.id}">Detail</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>

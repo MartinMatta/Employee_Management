@@ -8,24 +8,24 @@ import java.util.Date;
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-    private String surname;
-    private String project;
+    private String email;
+    private String tel;
 
-    @Column(name = "creation_date")
+    @Column(name = "registration_date")
     private Date date;
 
     public Employee(
-            String name, String surname,
-            String project, Date date,
+            String name, String email,
+            String tel, Date date,
             boolean isDone) {
 
         this.name = name;
-        this.surname = surname;
-        this.project = project;
+        this.email = email;
+        this.tel = tel;
         this.date = date;
 
     }
@@ -48,20 +48,20 @@ public class Employee {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getProject() {
-        return project;
+    public String getTel() {
+        return tel;
     }
 
-    public void setProject(String project) {
-        this.project = project;
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 
     public Date getDate() {
